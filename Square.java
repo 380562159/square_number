@@ -23,8 +23,6 @@ public class Square {
             a2 = i;
         }
 
-        System.out.println(a1 + " " +  a2);
-
         double gap = 0.1;
         for (int j = 1; j <= precision; j++) {
             gap /= 10;
@@ -65,7 +63,7 @@ public class Square {
         int value = 3;
         int precision = 2;
         double a = SquareInt(value, precision);
-        double a1 = processPrecision(value, precision);
+        double a1 = processPrecision(a, precision);
         System.out.println(a + " => " + a1);
     }
 
@@ -73,13 +71,22 @@ public class Square {
         int value = 9;
         int precision = 2;
         double a = SquareInt(value, precision);
-        double a1 = processPrecision(value, precision);
+        double a1 = processPrecision(a, precision);
         System.out.println(a + " => " + a1);
 
     }
 
+    public static void test3() {
+        int value = 2;
+        int precision = 3;
+        double a = SquareInt(value, precision);
+        double a1 = processPrecision(a, precision);
+        System.out.println(a + " => " + a1);
+    }
+
     public static void main(String[] args) {
-        test1();
-        test2();
+//        test1();
+//        test2();
+        test3();
     }
 }
